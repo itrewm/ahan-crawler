@@ -15,6 +15,13 @@ from scrapyd_api import ScrapydAPI
 # ورق سرد و گرم فقط داره
 # در پروفیل ها : https://tehran-ahan.com/product-category/industrial-tube/ فقط گرفته شد
 
+API_KEY = '6ef14ac6-455f-4776-b19a-8488acd290b7'
+
+def get_scrapeops_url(url):
+    payload = {'api_key': API_KEY, 'url': url}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
+
 
 class PivanTableSpider(scrapy.Spider):
 
@@ -74,7 +81,7 @@ class PivanTableSpider(scrapy.Spider):
 
 
         for url in navdani_urls:
-            yield scrapy.Request(url=url, callback=self.navdani_parse)
+            yield scrapy.Request(url=get_scrapeops_url(url), callback=self.navdani_parse)
 
 
 
