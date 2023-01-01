@@ -1,7 +1,7 @@
 import scrapy
 import requests
 from urllib.parse import urlencode
-from scrapyd_api import ScrapydAPI
+
 
 
 # type_id
