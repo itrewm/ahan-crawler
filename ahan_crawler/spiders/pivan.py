@@ -2,7 +2,7 @@ import scrapy
 import requests
 from scrapyd_api import ScrapydAPI
 
-slaamaasdassdasda
+
 # type_id
 # تیرآهن : 1
 # میلگرد : 2
@@ -290,7 +290,7 @@ class PivanTableSpider(scrapy.Spider):
                 
                 print(requests.post(
 
-                    url="https://apinew.samaneahan.com/api/v3/crawler/product/bulk",
+                    url="https://webhook.site/cbf317a3-8015-42fc-9e44-f58032b85a0d",
                     headers={
                     'Accept': 'application/vnd.SamaneAhan.v2+json',
                     },
